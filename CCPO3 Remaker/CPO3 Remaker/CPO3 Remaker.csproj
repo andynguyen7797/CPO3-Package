@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91BB570F-7CAC-4316-8498-03D8D53FD29C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CPO3_Remaker</RootNamespace>
+    <AssemblyName>CPO3 Remaker</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LOGO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>8810A6D8D7CC231399C80FD9C6E063501CDC1840</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CPO3 Remaker_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.2.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsDisplayAPI, Version=1.0.6336.17084, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsDisplayAPI.1.0.6336.17084\lib\net45\WindowsDisplayAPI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom User Control\AnswerContent_Editter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom User Control\AnswerContent_Editter.Designer.cs">
+      <DependentUpon>AnswerContent_Editter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom User Control\Ava_Editter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom User Control\Ava_Editter.Designer.cs">
+      <DependentUpon>Ava_Editter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Backup.cs" />
+    <Compile Include="Custom User Control\Circle_Image.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom User Control\Circle_Image.Designer.cs">
+      <DependentUpon>Circle_Image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Client_Thread.cs" />
+    <Compile Include="Class\Cons.cs" />
+    <Compile Include="Form\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom User Control\horizontalLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom User Control\horizontalLine.Designer.cs">
+      <DependentUpon>horizontalLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom User Control\Line.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom User Control\Line.Designer.cs">
+      <DependentUpon>Line.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LogForm.Designer.cs">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\ScreenSettingsLog.cs" />
+    <Compile Include="Form\Login Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Login Form.Designer.cs">
+      <DependentUpon>Login Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Man_Hinh_Cau_Tra_Loi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Man_Hinh_Cau_Tra_Loi.Designer.cs">
+      <DependentUpon>Man_Hinh_Cau_Tra_Loi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Man_Hinh_Diem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Man_Hinh_Diem.Designer.cs">
+      <DependentUpon>Man_Hinh_Diem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Man_Hinh_Diem_Va_Tra_Loi_Editter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Man_Hinh_Diem_Va_Tra_Loi_Editter.Designer.cs">
+      <DependentUpon>Man_Hinh_Diem_Va_Tra_Loi_Editter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Network\NetWork_Manager.cs" />
+    <Compile Include="Custom User Control\Player_Control.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom User Control\Player_Control.Designer.cs">
+      <DependentUpon>Player_Control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Player_Manager.cs" />
+    <Compile Include="Class\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Class\Quan_ly_man_hinh_diem.cs" />
+    <Compile Include="Class\Quan_ly_man_hinh_tra_loi.cs" />
+    <Compile Include="Network\Receiver_Manager.cs" />
+    <Compile Include="Class\SapXep.cs" />
+    <Compile Include="Network\Send_Manager.cs" />
+    <Compile Include="Class\SerializerOfJson.cs" />
+    <Compile Include="Form\Set_Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Set_Screen.Designer.cs">
+      <DependentUpon>Set_Screen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Set_Screen_Properties.cs" />
+    <Compile Include="Class\SystemLog.cs" />
+    <EmbeddedResource Include="Custom User Control\AnswerContent_Editter.resx">
+      <DependentUpon>AnswerContent_Editter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom User Control\Ava_Editter.resx">
+      <DependentUpon>Ava_Editter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom User Control\Circle_Image.resx">
+      <DependentUpon>Circle_Image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom User Control\horizontalLine.resx">
+      <DependentUpon>horizontalLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom User Control\Line.resx">
+      <DependentUpon>Line.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LogForm.resx">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Login Form.resx">
+      <DependentUpon>Login Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Man_Hinh_Cau_Tra_Loi.resx">
+      <DependentUpon>Man_Hinh_Cau_Tra_Loi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Man_Hinh_Diem.resx">
+      <DependentUpon>Man_Hinh_Diem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Man_Hinh_Diem_Va_Tra_Loi_Editter.resx">
+      <DependentUpon>Man_Hinh_Diem_Va_Tra_Loi_Editter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom User Control\Player_Control.resx">
+      <DependentUpon>Player_Control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Set_Screen.resx">
+      <DependentUpon>Set_Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CPO3 Remaker_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\User_LOGO\File Logo\ic_lock_outline_black_24dp\ic_lock_outline_black_24dp\web\ic_lock_outline_black_24dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\User_LOGO\File Logo\Settings logo\ic_settings_black_24dp\web\ic_settings_black_24dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resource\Man hinh diem\Man_hinh_diem_1.png" />
+    <None Include="Resource\Man hinh diem\Man_hinh_diem.png" />
+    <None Include="Resource\Man hinh diem\Man_hinh_diem.jpg" />
+    <None Include="Resource\User_LOGO\File Logo\LOGO.ico" />
+    <None Include="bin\Debug\Resource\Button Logo\play timecount button\web\ic_play_circle_outline_white_24dp_1x.png" />
+    <None Include="bin\Debug\Resource\Button Logo\restore timecount button\web\ic_restore_white_24dp_1x.png" />
+    <None Include="bin\Debug\Resource\Button Logo\stop timecount button\web\ic_stop_white_24dp_1x.png" />
+    <None Include="bin\Debug\Resource\Default Logo\user.png" />
+    <Content Include="LOGO.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
